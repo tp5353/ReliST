@@ -5,9 +5,9 @@ It reads spatial expression data and base-model deconvolution outputs, then prod
 spot-level risk scores that indicate where predictions should be trusted, reviewed,
 down-weighted, or withheld from downstream interpretation.
 
-This repository is the lightweight public deployment surface for the ReliST codebase.
-It intentionally excludes raw data, large processed objects, generated result
-directories, figure builders, and dataset-specific validation pipelines.
+This repository provides the core Python package, command-line entry points, example
+configuration files, and tests for running ReliST on prepared spatial transcriptomics
+deconvolution outputs.
 
 ## Repository Layout
 
@@ -55,12 +55,13 @@ For externally computed abundance tables, use `model.name: precomputed` with
 
 See `docs/deployment.md` for the deployment workflow.
 
-## Data Policy
+## Data And Outputs
 
-Raw datasets and large generated outputs are not stored in this Git repository.
-Expected local paths are documented in the YAML configs and in `docs/data_sources.md`.
-For shared deployments, document each dataset source and keep large data files outside
-the Git repository.
+Datasets and generated outputs are not versioned in this repository. Example configs
+use repository-relative paths under `data/` and `results/`; see `docs/data_sources.md`
+for the expected local layout.
+
+Keep large `.h5ad` files, model outputs, and generated figures outside Git.
 
 ## Tests
 
