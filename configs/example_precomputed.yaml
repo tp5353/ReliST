@@ -1,0 +1,34 @@
+dataset:
+  ready_dir: data/example/ready
+  visium_h5ad: data/example/ready/spatial.h5ad
+  snrna_h5ad: data/example/ready/reference.h5ad
+  reference_celltype_column: cell_type
+preprocessing:
+  use_hvg_only: true
+  max_genes: 1000
+model:
+  name: precomputed
+  precomputed_abundance_csv: results/external_model/base_model_abundance_means.csv
+  precomputed_uncertainty_csv:
+  layer: counts
+risk:
+  neighbor_k: 8
+  normalization_scope: sample
+  missing_uncertainty_policy: ambiguity
+  confidence_proxy_uncertainty_weight: 0.7
+  reference_feature_mode: marker_discordance
+  reference_feature_marker_top_k: 25
+  reference_feature_min_positive_markers: 10
+  reference_feature_marker_subset: odd
+  reference_feature_subsampling_repeats: 8
+  reference_feature_subsampling_fraction: 0.5
+  reference_feature_subsampling_random_state: 0
+  stability_mode: none
+  stability_repeats: 0
+  stability_gene_fraction: 0.8
+  stability_ridge_lambda: 0.001
+  stability_random_state: 0
+  high_risk_quantile: 0.9
+outputs:
+  results_dir: results/example_precomputed
+  run_id: example-precomputed

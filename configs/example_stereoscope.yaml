@@ -1,0 +1,56 @@
+dataset:
+  ready_dir: data/example/ready
+  visium_h5ad: data/example/ready/spatial.h5ad
+  snrna_h5ad: data/example/ready/reference.h5ad
+  reference_celltype_column: cell_type
+preprocessing:
+  use_hvg_only: true
+  max_genes: 1000
+model:
+  name: stereoscope
+  layer: counts
+  accelerator: auto
+  device: auto
+  stereoscope_conda_env: st-scvi
+  stereoscope_sc_max_epochs: 20
+  stereoscope_sc_lr: 0.01
+  stereoscope_sc_batch_size: 2048
+  stereoscope_sp_max_epochs: 50
+  stereoscope_sp_lr: 0.01
+  stereoscope_sp_batch_size: 1024
+  stereoscope_ensemble_repeats: 4
+  stereoscope_prior_weight: n_obs
+  stereoscope_min_reference_cells_per_type: 25
+  stereoscope_reference_max_cells_per_type: 1500
+  stereoscope_random_state: 0
+risk:
+  neighbor_k: 8
+  normalization_scope: sample
+  missing_uncertainty_policy: ambiguity
+  confidence_proxy_uncertainty_weight: 0.7
+  dual_axis_structure_weights:
+    phi_local: 3
+    phi_uncertainty: 1
+    phi_stability: 0
+    phi_reference: 0
+  dual_axis_reference_weights:
+    phi_local: 0
+    phi_uncertainty: 2
+    phi_stability: 1
+    phi_reference: 2
+  reference_feature_mode: reference_subsampling_instability
+  reference_feature_marker_top_k: 25
+  reference_feature_min_positive_markers: 10
+  reference_feature_marker_subset: odd
+  reference_feature_subsampling_repeats: 8
+  reference_feature_subsampling_fraction: 0.5
+  reference_feature_subsampling_random_state: 0
+  stability_mode: none
+  stability_repeats: 0
+  stability_gene_fraction: 0.8
+  stability_ridge_lambda: 0.001
+  stability_random_state: 0
+  high_risk_quantile: 0.9
+outputs:
+  results_dir: results/example_stereoscope
+  run_id: example-stereoscope

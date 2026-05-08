@@ -1,0 +1,40 @@
+dataset:
+  ready_dir: data/example/ready
+  visium_h5ad: data/example/ready/spatial.h5ad
+  snrna_h5ad: data/example/ready/reference.h5ad
+  reference_celltype_column: cell_type
+preprocessing:
+  use_hvg_only: true
+  max_genes: 1000
+model:
+  name: tangram
+  layer: counts
+  accelerator: cpu
+  device: cpu
+  tangram_mode: clusters
+  tangram_learning_rate: 0.1
+  tangram_num_epochs: 500
+  tangram_scale: true
+  tangram_lambda_d: 1.0
+  tangram_lambda_g1: 1.0
+  tangram_lambda_g2: 0.0
+  tangram_lambda_r: 0.0
+  tangram_density_prior: rna_count_based
+  tangram_random_state: 0
+  tangram_verbose: true
+  tangram_ensemble_repeats: 8
+  tangram_gene_fraction: 0.7
+  tangram_reference_subsample_max_cells_per_type: 1500
+risk:
+  neighbor_k: 8
+  normalization_scope: sample
+  missing_uncertainty_policy: zero
+  stability_mode: none
+  stability_repeats: 0
+  stability_gene_fraction: 0.8
+  stability_ridge_lambda: 0.001
+  stability_random_state: 0
+  high_risk_quantile: 0.9
+outputs:
+  results_dir: results/example_tangram
+  run_id: example-tangram

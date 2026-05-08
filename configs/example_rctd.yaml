@@ -1,0 +1,32 @@
+dataset:
+  ready_dir: data/example/ready
+  visium_h5ad: data/example/ready/spatial.h5ad
+  snrna_h5ad: data/example/ready/reference.h5ad
+  reference_celltype_column: cell_type
+preprocessing:
+  use_hvg_only: true
+  max_genes: 1000
+model:
+  name: rctd
+  layer: counts
+  rctd_max_cores: 8
+  rctd_doublet_mode: doublet
+  rctd_min_reference_cells_per_type: 25
+  rctd_max_reference_cells_per_type: 100
+  rctd_reference_subsample_seed: 0
+risk:
+  neighbor_k: 8
+  normalization_scope: sample
+  missing_uncertainty_policy: zero
+  stability_mode: none
+  stability_repeats: 0
+  stability_gene_fraction: 0.8
+  stability_ridge_lambda: 0.001
+  stability_random_state: 0
+  stability_spatial_max_epochs: 60
+  stability_spatial_batch_size: 1024
+  stability_posterior_samples: 50
+  high_risk_quantile: 0.9
+outputs:
+  results_dir: results/example_rctd
+  run_id: example-rctd

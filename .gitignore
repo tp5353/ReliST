@@ -1,0 +1,56 @@
+# Local data and generated outputs
+/data/
+/results/
+/outputs/
+/runs/
+
+# Large scientific data objects
+*.h5
+*.h5ad
+*.loom
+*.rds
+*.rda
+*.rdata
+*.mtx
+*.mtx.gz
+*.csv.gz
+*.tsv.gz
+*.tar
+*.tar.gz
+*.zip
+
+# Generated figures and reports
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.svg
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Local editor and agent state
+.DS_Store
+.idea/
+.vscode/
+.codex/
+.claude_resources.json
+
+# Environment and credentials
+.env
+.env.*
+!.env.example

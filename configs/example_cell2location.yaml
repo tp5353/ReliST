@@ -1,0 +1,64 @@
+dataset:
+  ready_dir: data/example/ready
+  visium_h5ad: data/example/ready/spatial.h5ad
+  snrna_h5ad: data/example/ready/reference.h5ad
+  reference_celltype_column: cell_type
+preprocessing:
+  use_hvg_only: true
+  max_genes: 1000
+model:
+  name: cell2location
+  precomputed_abundance_csv:
+  precomputed_uncertainty_csv:
+  layer: counts
+  reference_batch_key: batch
+  visium_batch_key: sample_id
+  accelerator: auto
+  device: auto
+  reference_max_epochs: 50
+  reference_batch_size: 2048
+  reference_posterior_samples: 200
+  reference_signature_key: means_per_cluster_mu_fg
+  spatial_max_epochs: 200
+  spatial_batch_size: 1024
+  spatial_posterior_samples: 200
+  posterior_batch_size: 1024
+  n_cells_per_location: 8.0
+  detection_alpha: 20.0
+  abundance_key: means_cell_abundance_w_sf
+  uncertainty_key: stds_cell_abundance_w_sf
+  early_stopping: false
+risk:
+  neighbor_k: 8
+  normalization_scope: sample
+  missing_uncertainty_policy: ambiguity
+  confidence_proxy_uncertainty_weight: 0.7
+  reference_feature_mode: reference_subsampling_instability
+  reference_feature_marker_top_k: 25
+  reference_feature_min_positive_markers: 10
+  reference_feature_marker_subset: odd
+  reference_feature_subsampling_repeats: 8
+  reference_feature_subsampling_fraction: 0.5
+  reference_feature_subsampling_random_state: 0
+  dual_axis_structure_weights:
+    phi_local: 3.0
+    phi_uncertainty: 1.0
+    phi_stability: 0.0
+    phi_reference: 0.0
+  dual_axis_reference_weights:
+    phi_local: 0.0
+    phi_uncertainty: 2.0
+    phi_stability: 1.0
+    phi_reference: 2.0
+  stability_mode: none
+  stability_repeats: 0
+  stability_gene_fraction: 0.8
+  stability_ridge_lambda: 0.001
+  stability_random_state: 0
+  stability_spatial_max_epochs: 60
+  stability_spatial_batch_size: 1024
+  stability_posterior_samples: 50
+  high_risk_quantile: 0.9
+outputs:
+  results_dir: results/example_cell2location
+  run_id: example-cell2location
