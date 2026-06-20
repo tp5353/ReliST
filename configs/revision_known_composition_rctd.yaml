@@ -1,0 +1,36 @@
+dataset:
+  ready_dir: results/revision_known_composition_benchmark/runs/2026-06-20-dlpfc-known-composition-v2-donor-disjoint/artifacts
+  visium_h5ad: results/revision_known_composition_benchmark/runs/2026-06-20-dlpfc-known-composition-v2-donor-disjoint/artifacts/known_composition_pseudo_visium.h5ad
+  snrna_h5ad: results/revision_known_composition_benchmark/runs/2026-06-20-dlpfc-known-composition-v2-donor-disjoint/artifacts/known_composition_train_reference.h5ad
+  reference_celltype_column: cellType_k
+preprocessing:
+  use_hvg_only: false
+  max_genes: 1000
+model:
+  name: rctd
+  layer: counts
+  rctd_max_cores: 8
+  rctd_doublet_mode: doublet
+  rctd_umi_min: 20
+  rctd_cell_min_instance: 20
+  rctd_min_reference_cells_per_type: 20
+  rctd_max_reference_cells_per_type: 120
+  rctd_reference_subsample_seed: 20260620
+risk:
+  neighbor_k: 8
+  normalization_scope: sample
+  missing_uncertainty_policy: zero
+  confidence_proxy_uncertainty_weight: 0.5
+  reference_feature_mode: reference_subsampling_instability
+  reference_feature_marker_top_k: 25
+  reference_feature_min_positive_markers: 10
+  reference_feature_marker_subset: odd
+  reference_feature_subsampling_repeats: 8
+  reference_feature_subsampling_fraction: 0.5
+  reference_feature_subsampling_random_state: 20260620
+  stability_mode: none
+  stability_repeats: 0
+  high_risk_quantile: 0.9
+outputs:
+  results_dir: results/revision_known_composition_rctd
+  run_id: 2026-06-20-dlpfc-known-composition-rctd-v1

@@ -1,0 +1,45 @@
+dataset:
+  ready_dir: results/revision_known_composition_benchmark/runs/2026-06-20-dlpfc-known-composition-v2-donor-disjoint/artifacts
+  visium_h5ad: results/revision_known_composition_benchmark/runs/2026-06-20-dlpfc-known-composition-v2-donor-disjoint/artifacts/known_composition_pseudo_visium.h5ad
+  snrna_h5ad: results/revision_known_composition_benchmark/runs/2026-06-20-dlpfc-known-composition-v2-donor-disjoint/artifacts/known_composition_train_reference.h5ad
+  reference_celltype_column: cellType_k
+preprocessing:
+  use_hvg_only: false
+  max_genes: 1000
+model:
+  name: tangram
+  layer: counts
+  accelerator: gpu
+  device: 0
+  tangram_mode: clusters
+  tangram_learning_rate: 0.1
+  tangram_num_epochs: 300
+  tangram_scale: true
+  tangram_lambda_d: 1.0
+  tangram_lambda_g1: 1.0
+  tangram_lambda_g2: 0.0
+  tangram_lambda_r: 0.0
+  tangram_density_prior: rna_count_based
+  tangram_random_state: 20260620
+  tangram_verbose: true
+  tangram_ensemble_repeats: 5
+  tangram_gene_fraction: 0.7
+  tangram_reference_subsample_max_cells_per_type: 1200
+risk:
+  neighbor_k: 8
+  normalization_scope: sample
+  missing_uncertainty_policy: zero
+  confidence_proxy_uncertainty_weight: 0.5
+  reference_feature_mode: reference_subsampling_instability
+  reference_feature_marker_top_k: 25
+  reference_feature_min_positive_markers: 10
+  reference_feature_marker_subset: odd
+  reference_feature_subsampling_repeats: 8
+  reference_feature_subsampling_fraction: 0.5
+  reference_feature_subsampling_random_state: 20260620
+  stability_mode: none
+  stability_repeats: 0
+  high_risk_quantile: 0.9
+outputs:
+  results_dir: results/revision_known_composition_tangram
+  run_id: 2026-06-20-dlpfc-known-composition-tangram-v1

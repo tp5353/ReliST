@@ -63,6 +63,20 @@ for the expected local layout.
 
 Keep large `.h5ad` files, model outputs, and generated figures outside Git.
 
+## Revision Release
+
+The `v0.2.0-revision` release adds the iScience revision analyses, including
+donor-disjoint known-composition pseudo-spots, RCTD and Tangram validation runs,
+paired bootstrap confidence intervals, uncertainty and disagreement baselines,
+component ablation, threshold sensitivity, and reference-perturbation stress
+tests.
+
+Revision entry points are documented in `docs/revision_v0.2.0.md`. Small
+source-data CSV tables used in the revised manuscript are stored under
+`revision/v0.2.0-revision/source_tables/`. Large generated artifacts such as
+`.h5ad` files and figure PDFs are intentionally excluded from Git and should be
+regenerated from the scripts and public input data.
+
 ## Tests
 
 Core tests can be run with:
@@ -77,4 +91,5 @@ Tangram, Stereoscope, or R/RCTD.
 
 ## Citation
 
-Citation metadata can be added once a citable release is available.
+For the iScience revision, cite the frozen `v0.2.0-revision` GitHub release and
+its matching Zenodo archive once the archive DOI has been minted.

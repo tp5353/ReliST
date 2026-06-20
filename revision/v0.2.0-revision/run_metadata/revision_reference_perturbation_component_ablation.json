@@ -1,0 +1,33 @@
+{
+  "run_id": "2026-06-20-reference-perturbation-component-ablation-v2-donor-disjoint",
+  "source_reference_perturbation_run_dir": "results/revision_reference_perturbation/runs/2026-06-20-reference-perturbation-v2-donor-disjoint",
+  "score_definitions": {
+    "full_risk": {
+      "phi_local": 1.0,
+      "phi_uncertainty": 1.0,
+      "phi_reference": 1.0
+    },
+    "leave_out_reference": {
+      "phi_local": 1.0,
+      "phi_uncertainty": 1.0
+    },
+    "reference_only": {
+      "phi_reference": 1.0
+    },
+    "local_only": {
+      "phi_local": 1.0
+    },
+    "uncertainty_only": {
+      "phi_uncertainty": 1.0
+    },
+    "local_reference": {
+      "phi_local": 1.0,
+      "phi_reference": 1.0
+    },
+    "uncertainty_reference": {
+      "phi_uncertainty": 1.0,
+      "phi_reference": 1.0
+    }
+  },
+  "claim_boundary": "The reference component should be interpreted by scenario. A near-neutral or negative contribution in matched-reference settings is compatible with contribution under explicit reference mismatch."
+}

@@ -1,0 +1,23 @@
+{
+  "run_id": "2026-06-20-uncertainty-baseline-v1",
+  "known_composition_run_dir": "results/revision_known_composition_benchmark/runs/2026-06-20-dlpfc-known-composition-v1",
+  "contract_fairness_run_dir": "results/model_contract_fairness_control/runs/2026-04-29-dlpfc-model-contract-fairness-control-v1",
+  "relist_scores": [
+    "risk_score",
+    "reference_risk_score",
+    "local_uncertainty_risk_score"
+  ],
+  "confidence_baselines": [
+    "abundance_entropy_risk",
+    "inverse_top1_margin",
+    "inverse_max_abundance",
+    "phi_uncertainty"
+  ],
+  "component_diagnostics": [
+    "phi_local",
+    "phi_reference",
+    "snrna_marker_discordance",
+    "snrna_signature_residual"
+  ],
+  "claim_boundary": "This table supports a reviewer-facing baseline comparison. It should not be phrased as an absolute base-model ranking or universal superiority claim."
+}

@@ -1,0 +1,11 @@
+{
+  "run_id": "2026-06-20-reference-perturbation-v2-donor-disjoint",
+  "known_composition_run_dir": "results/revision_known_composition_benchmark/runs/2026-06-20-dlpfc-known-composition-v2-donor-disjoint",
+  "projection_method": "nnls",
+  "reference_repeats": 8,
+  "reference_fraction": 0.5,
+  "contamination_fraction": 0.2,
+  "random_state": 20260620,
+  "primary_error_col": "total_variation_error",
+  "claim_boundary": "Reference perturbation is a controlled stress test. It supports sensitivity to reference mismatch but should not be phrased as natural tissue ground truth."
+}

@@ -1,0 +1,23 @@
+{
+  "run_id": "2026-06-20-threshold-sensitivity-v2-donor-disjoint",
+  "known_composition_run_dir": "results/revision_known_composition_benchmark/runs/2026-06-20-dlpfc-known-composition-v2-donor-disjoint",
+  "score_columns": [
+    "risk_score",
+    "local_uncertainty_risk_score",
+    "reference_risk_score"
+  ],
+  "high_risk_fractions": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "keep_fractions": [
+    0.7,
+    0.8,
+    0.9,
+    0.95
+  ],
+  "primary_error_col": "total_variation_error",
+  "claim_boundary": "Thresholds are illustrative review budgets selected from coverage-risk curves; they are not universal cutoffs or truth-calibrated probabilities."
+}

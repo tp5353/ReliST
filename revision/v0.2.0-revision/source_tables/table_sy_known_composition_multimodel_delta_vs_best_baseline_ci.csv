@@ -1,0 +1,10 @@
+model_key,primary_score,baseline_score,metric,mean,ci95_low,ci95_high,n_bootstrap
+nnls_projection,risk_score,cross_model_disagreement,delta_auroc_top20,-0.12489246613462275,-0.1728597771414984,-0.07708667733755888,500
+nnls_projection,risk_score,cross_model_disagreement,delta_keep80_mean_error,0.012322601569774747,0.00649845821464059,0.018079416485765297,500
+nnls_projection,risk_score,cross_model_disagreement,delta_aurc,0.030562063108002104,0.02161994770275115,0.04081209365083125,500
+rctd,risk_score,abundance_entropy_risk,delta_auroc_top20,-0.031272386872255226,-0.06750005927256453,0.0032253506731403474,500
+rctd,risk_score,abundance_entropy_risk,delta_keep80_mean_error,0.0052092630794601915,0.000546839288796297,0.009929902124760852,500
+rctd,risk_score,abundance_entropy_risk,delta_aurc,0.015610082606356067,0.00762958012937795,0.022868087991863146,500
+tangram,risk_score,cross_model_disagreement,delta_auroc_top20,-0.2682677265844572,-0.31808472050279624,-0.22097041069496415,500
+tangram,risk_score,cross_model_disagreement,delta_keep80_mean_error,0.03137359628547201,0.025339049465769266,0.03764706399500543,500
+tangram,risk_score,cross_model_disagreement,delta_aurc,0.06885742199772525,0.05691373353336667,0.07949608762215182,500

@@ -1,0 +1,15 @@
+{
+  "run_id": "2026-06-20-revision-figures-v2-multimodel-donor",
+  "known_composition_run_dir": "results/revision_known_composition_benchmark/runs/2026-06-20-dlpfc-known-composition-v2-donor-disjoint",
+  "baseline_run_dir": "results/revision_uncertainty_baseline_eval/runs/2026-06-20-uncertainty-baseline-v1",
+  "multimodel_run_dir": "results/revision_known_composition_multimodel_eval/runs/2026-06-20-dlpfc-known-composition-multimodel-v2-rctd-tangram",
+  "ablation_run_dir": "results/revision_component_ablation/runs/2026-06-20-component-ablation-v2-donor-disjoint",
+  "threshold_run_dir": "results/revision_threshold_sensitivity/runs/2026-06-20-threshold-sensitivity-v2-donor-disjoint",
+  "reference_perturbation_run_dir": "results/revision_reference_perturbation/runs/2026-06-20-reference-perturbation-v2-donor-disjoint",
+  "reference_perturbation_component_run_dir": "results/revision_reference_perturbation_component_ablation/runs/2026-06-20-reference-perturbation-component-ablation-v2-donor-disjoint",
+  "n_figures": 10,
+  "contact_sheet": "results/revision_figures/runs/2026-06-20-revision-figures-v2-multimodel-donor/figures/revision_figures_contact_sheet.png",
+  "figure_format": "PDF vector with PNG previews",
+  "font_family": "Liberation Sans",
+  "claim_boundary": "These are single-panel revision figures. They are not automatically assembled into a composite figure; final manuscript placement should be decided during iScience revision writing."
+}

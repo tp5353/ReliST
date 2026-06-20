@@ -1,0 +1,51 @@
+{
+  "run_id": "2026-06-20-component-ablation-v2-donor-disjoint",
+  "known_composition_run_dir": "results/revision_known_composition_benchmark/runs/2026-06-20-dlpfc-known-composition-v2-donor-disjoint",
+  "feature_columns": [
+    "phi_local",
+    "phi_uncertainty",
+    "phi_reference"
+  ],
+  "ablation_schemes": {
+    "full_risk": {
+      "phi_local": 1.0,
+      "phi_uncertainty": 1.0,
+      "phi_reference": 1.0
+    },
+    "local_only": {
+      "phi_local": 1.0
+    },
+    "uncertainty_only": {
+      "phi_uncertainty": 1.0
+    },
+    "reference_only": {
+      "phi_reference": 1.0
+    },
+    "local_uncertainty": {
+      "phi_local": 1.0,
+      "phi_uncertainty": 1.0
+    },
+    "local_reference": {
+      "phi_local": 1.0,
+      "phi_reference": 1.0
+    },
+    "uncertainty_reference": {
+      "phi_uncertainty": 1.0,
+      "phi_reference": 1.0
+    },
+    "leave_out_local": {
+      "phi_uncertainty": 1.0,
+      "phi_reference": 1.0
+    },
+    "leave_out_uncertainty": {
+      "phi_local": 1.0,
+      "phi_reference": 1.0
+    },
+    "leave_out_reference": {
+      "phi_local": 1.0,
+      "phi_uncertainty": 1.0
+    }
+  },
+  "primary_error_col": "total_variation_error",
+  "claim_boundary": "Component ablation describes contribution in the known-composition pseudo-spot benchmark; it is not a universal component ranking."
+}

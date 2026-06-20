@@ -1,0 +1,9 @@
+comparison_block,entry,score_name,score_family,spearman_error,auroc_top20_error,auroc_top10_error,top_minus_bottom20_error,keep80_mean_error,keep80_error_reduction_vs_full,keep80_high_error_fraction,source,n_rows,n_models,best_common_or_baseline_auc,delta_auc,median_delta_auc,fraction_delta_gt_0p05,fraction_delta_lt_minus_0p05
+known_composition_true_error,primary_risk_score,risk_score,ReliST score,0.5438321464513258,0.7827872221669356,0.777716049382716,0.2596799140117263,0.4477113556711519,0.0661586508513171,0.134375,known_composition,,,,,,,
+known_composition_true_error,best_relist_score,local_uncertainty_risk_score,ReliST score,0.564973065855556,0.7915922100735985,0.8044753086419754,0.2690355811671526,0.44423493894874,0.0734097997023298,0.1229166666666666,known_composition,,,,,,,
+known_composition_true_error,best_confidence_baseline,abundance_entropy_risk,confidence / uncertainty baseline,0.5445396921466699,0.7435303891069103,0.753533950617284,0.2608180573059611,0.4473117281031208,0.066992198498836,0.1385416666666666,known_composition,,,,,,,
+known_composition_true_error,primary_minus_best_confidence,risk_score - abundance_entropy_risk,delta,-0.0007075456953440362,0.039256833060025365,0.02418209876543198,-0.0011381432942347836,0.0003996275680310801,-0.0008335476475189035,-0.004166666666666596,known_composition,,,,,,,
+all_dlpfc_anchored_proxies,,,,,0.744865246081016,,,,,,dlpfc_contract_fairness,19.0,5.0,0.6426347551837654,0.10223049089725048,0.0989532171381041,0.6842105263157895,0.15789473684210525
+marker_discordance_only,,,,,0.8458858759611104,,,,,,dlpfc_contract_fairness,5.0,5.0,0.5464133463853106,0.29947252957579973,0.2903161742894911,1.0,0.0
+reference_residual_only,,,,,0.684989518802281,,,,,,dlpfc_contract_fairness,4.0,4.0,0.6029098526384897,0.08207966616379114,0.08241119219656745,0.5,0.0
+structure_proxies,,,,,0.7183052220524628,,,,,,dlpfc_contract_fairness,10.0,5.0,0.7066354206011033,0.011669801451359582,0.0760556904412062,0.6,0.3

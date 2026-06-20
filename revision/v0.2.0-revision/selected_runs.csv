@@ -1,0 +1,11 @@
+module,selected_run,role
+revision_known_composition_benchmark,2026-06-20-dlpfc-known-composition-v2-donor-disjoint,donor-disjoint known-composition pseudo-spot benchmark
+revision_known_composition_rctd,2026-06-20-dlpfc-known-composition-rctd-v1,RCTD base-model validation on pseudo-spots
+revision_known_composition_tangram,2026-06-20-dlpfc-known-composition-tangram-v1,Tangram base-model validation on pseudo-spots
+revision_known_composition_multimodel_eval,2026-06-20-dlpfc-known-composition-multimodel-v2-rctd-tangram,NNLS/RCTD/Tangram true-error and baseline comparison
+revision_uncertainty_baseline_eval,2026-06-20-uncertainty-baseline-v1,DLPFC proxy and uncertainty baseline summary
+revision_component_ablation,2026-06-20-component-ablation-v2-donor-disjoint,matched-reference component ablation
+revision_threshold_sensitivity,2026-06-20-threshold-sensitivity-v2-donor-disjoint,coverage-risk and illustrative review-budget analysis
+revision_reference_perturbation,2026-06-20-reference-perturbation-v2-donor-disjoint,controlled reference-perturbation stress tests
+revision_reference_perturbation_component_ablation,2026-06-20-reference-perturbation-component-ablation-v2-donor-disjoint,full versus no-reference score under perturbation
+revision_figures,2026-06-20-revision-figures-v2-multimodel-donor,revision figure generation
