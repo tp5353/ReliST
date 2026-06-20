@@ -9,6 +9,8 @@ relative paths under `data/` and `results/`.
 The `v0.2.0-revision` release adds:
 
 - donor-disjoint known-composition pseudo-spot validation;
+- independent NNLS simulation seed-repeat checks for the donor-disjoint
+  pseudo-spot setting;
 - RCTD and Tangram true-error validation on the same pseudo-spot benchmark;
 - paired bootstrap confidence intervals for AUROC, AURC, Spearman correlation,
   filtering deltas, and baseline deltas;
@@ -70,6 +72,21 @@ PYTHONPATH=src python scripts/run_revision_known_composition_multimodel_eval.py 
   --model-run rctd:results/revision_known_composition_rctd \
   --model-run tangram:results/revision_known_composition_tangram \
   --run-id 2026-06-20-dlpfc-known-composition-multimodel-v2-rctd-tangram
+```
+
+Generate the lightweight independent seed-repeat summary for the NNLS
+pseudo-spot simulation:
+
+```bash
+PYTHONPATH=src python scripts/run_revision_known_composition_benchmark.py \
+  --output-root results/revision_known_composition_seed_repeats \
+  --run-id 2026-06-20-dlpfc-known-composition-seed-20260621 \
+  --random-state 20260621
+PYTHONPATH=src python scripts/run_revision_known_composition_benchmark.py \
+  --output-root results/revision_known_composition_seed_repeats \
+  --run-id 2026-06-20-dlpfc-known-composition-seed-20260622 \
+  --random-state 20260622
+PYTHONPATH=src python scripts/summarize_revision_known_composition_seed_repeats.py
 ```
 
 Run supporting revision analyses:

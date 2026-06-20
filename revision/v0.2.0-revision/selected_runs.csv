@@ -3,6 +3,7 @@ revision_known_composition_benchmark,2026-06-20-dlpfc-known-composition-v2-donor
 revision_known_composition_rctd,2026-06-20-dlpfc-known-composition-rctd-v1,RCTD base-model validation on pseudo-spots
 revision_known_composition_tangram,2026-06-20-dlpfc-known-composition-tangram-v1,Tangram base-model validation on pseudo-spots
 revision_known_composition_multimodel_eval,2026-06-20-dlpfc-known-composition-multimodel-v2-rctd-tangram,NNLS/RCTD/Tangram true-error and baseline comparison
+revision_known_composition_seed_repeats,2026-06-20-dlpfc-known-composition-seed-repeat-summary,independent NNLS simulation seed-repeat check
 revision_uncertainty_baseline_eval,2026-06-20-uncertainty-baseline-v1,DLPFC proxy and uncertainty baseline summary
 revision_component_ablation,2026-06-20-component-ablation-v2-donor-disjoint,matched-reference component ablation
 revision_threshold_sensitivity,2026-06-20-threshold-sensitivity-v2-donor-disjoint,coverage-risk and illustrative review-budget analysis

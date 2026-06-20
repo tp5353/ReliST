@@ -1,0 +1,40 @@
+{
+  "run_id": "2026-06-20-dlpfc-known-composition-seed-repeat-summary",
+  "module": "revision_known_composition_seed_repeats",
+  "role": "Independent simulation seed-repeat check for the donor-disjoint NNLS pseudo-spot benchmark.",
+  "source_script": "scripts/summarize_revision_known_composition_seed_repeats.py",
+  "source_table": "revision/v0.2.0-revision/source_tables/table_sx_known_composition_seed_repeat_summary.csv",
+  "included_simulation_seeds": [
+    20260620,
+    20260621,
+    20260622
+  ],
+  "split_mode": "donor_disjoint",
+  "split_column": "BrNum",
+  "n_spots_per_seed": 1200,
+  "n_celltypes": 25,
+  "cells_per_spot_min": 4,
+  "cells_per_spot_max": 10,
+  "primary_score": "risk_score",
+  "summary": {
+    "spearman_error_range": [
+      0.253055,
+      0.352473
+    ],
+    "auroc_top20_error_range": [
+      0.619188,
+      0.694523
+    ],
+    "mean_auroc_top20_error": 0.647766,
+    "mean_auroc_top20_error_ci95": [
+      0.546344,
+      0.749189
+    ],
+    "mean_spearman_error": 0.292371,
+    "mean_spearman_error_ci95": [
+      0.161030,
+      0.423712
+    ]
+  },
+  "boundary": "This table is a lightweight repeatability check for the NNLS pseudo-spot simulation and does not replace the RCTD/Tangram multi-base-model validation."
+}
